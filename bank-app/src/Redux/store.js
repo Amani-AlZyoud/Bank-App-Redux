@@ -3,6 +3,6 @@ import accountsReducer from "./accountsReducer";
 
 export default configureStore({
   reducer: {
-     accounts: accountsReducer,
+     ACCOUNTS: accountsReducer,
   },
 });

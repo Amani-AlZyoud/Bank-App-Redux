@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 
 const Main = () => {
 
-    const accounts = useSelector(state => state.accounts)
+    const accounts = useSelector(state => state.ACCOUNTS)
   return (
-    <div className="shadow-lg rounded-lg overflow-hidden mt-5 mb-44 md:mx-10">
+    <div className="shadow-lg rounded-lg overflow-hidden mt-16 mb-16 md:mx-10">
       <table className="w-full table-fixed">
         <thead>
           <tr className="bg-gray-100">
