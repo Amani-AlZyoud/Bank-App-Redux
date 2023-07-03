@@ -8,7 +8,7 @@ const Coins = () => {
     <div className="bg-gray-200">
       <h1 className="text-center font-bold text-3xl py-3">Cryptocurrencies</h1>
       <div className="flex items-center justify-center  text-gray-800 py-3  bg-gray-200">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 w-full max-w-6xl mb-16">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 w-full max-w-6xl mb-20">
           {coinsData.map((coin) => {
             if (coin.change > 0) {
               return (
