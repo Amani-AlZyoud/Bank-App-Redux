@@ -1,12 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { getData } from "../actions/actions";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
+
+  const dispatch = useDispatch();
+
+  const handleGetData = (customer) => dispatch(getData(customer));
+
   return (
     <header className="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
       <div className="flex-1 flex justify-between items-center">
-        <a href="#" className="text-xl">
+        <Link to="/" className="text-xl">
           BANK
-        </a>
+        </Link>
       </div>
       <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
         <svg
@@ -28,24 +36,24 @@ const Header = () => {
         <nav>
           <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
             <li>
-              <a className="md:p-4 py-3 px-0 block" href="#">
+              <Link to="/accounts" className="md:p-4 py-3 px-0 block">
                 Accounts
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="md:p-4 py-3 px-0 block" href="#">
-                AboutUs
-              </a>
+              <Link to="/" className="md:p-4 py-3 px-0 block">
+                Add Account
+              </Link>
             </li>
             <li>
-              <a className="md:p-4 py-3 px-0 block" href="#">
-                Contact Us
-              </a>
+              <Link to="/coins" onClick={() => handleGetData()} className="md:p-4 py-3 px-0 block">
+              Cryptocurrencies
+              </Link>
             </li>
             <li>
-              <a className="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#">
+              <Link to="/" className="md:p-4 py-3 px-0 block">
                 Login
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

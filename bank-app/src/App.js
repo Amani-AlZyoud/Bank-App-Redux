@@ -3,6 +3,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Accounts from './components/Accounts';
+import Coins from './components/Coins';
 
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
     <BrowserRouter>
     <Header/>
     <Routes>
-      <Route exact path='/' element={<Home/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route exact path='/accounts' element={<Accounts/>}/>
+      <Route exact path='/coins' element={<Coins/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>

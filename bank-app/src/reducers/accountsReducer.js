@@ -1,6 +1,7 @@
 const initState = {
   accounts: [],
   numberOfAccounts: 0,
+  data: []
 };
 
 const accountsReducer = (state = initState, action) => {
@@ -24,6 +25,8 @@ const accountsReducer = (state = initState, action) => {
         accounts: state.accounts.filter((account) => account.id !== action.id),
         numberOfAccounts: state.numberOfAccounts - 1,
       };
+
+    case "GET_DATA": return {...state, data: action.payload};
     default:
       return state;
   }

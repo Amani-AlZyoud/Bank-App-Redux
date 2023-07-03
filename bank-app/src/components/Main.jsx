@@ -15,6 +15,7 @@ const Main = () => {
       <small className="font-bold md:mx-10">Number of Accounts: {AccountsNumber}</small>
       <div className="shadow-lg rounded-lg overflow-hidden mb-16 md:mx-10">
         <table className="w-full table-fixed">
+        {AccountsNumber === 0 && <h4 className="text-center my-4">NO ACCOUNTS</h4>}
           <thead>
             <tr className="bg-gray-100">
               <th className="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">
